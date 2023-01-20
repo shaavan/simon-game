@@ -6,7 +6,7 @@ var userClickedPattern = [];
 
 
 // Start Game
-$(document).keypress(function () {
+$("#level-title").click(function () {
     
     if (!gameStarted) {
         start();
@@ -55,7 +55,7 @@ function gameOver() {
     // Remove button binding once game over to prevent unnecessary clicking.
     $(".btn").unbind();
     
-    $("#level-title").text("Game Over, Press Any Key to restart");
+    $("#level-title").text("Game Over, click here to Restart");
 }
 
 
