@@ -3,6 +3,8 @@ var gameStarted = false;
 var level = 0;
 var gamePattern = [];
 var userClickedPattern = [];
+var gameOverOnce = false;
+var highScore = 0;
 
 
 // Start Game
@@ -12,7 +14,6 @@ $("#level-title").click(function () {
         start();
     }
 });
-
 
 function start() {
 
@@ -43,6 +44,14 @@ function start() {
 
 function gameOver() {
 
+    gameOverOnce = true;
+
+    if (level - 1 > highScore && level > 1) {
+        highScore = level - 1;
+        $("#high-score").text("High Score: " + highScore);
+        $("#high-score").css("display", "inline-block");
+    }
+    
     playSound("wrong");
 
     $("body").addClass("game-over");
@@ -121,3 +130,10 @@ function animatePress(currentColor) {
     }, 100);
 }
 
+
+// Hint Button
+
+$(".icon").click(function() {
+    $(".icon").toggleClass("icon-active");
+    $(".hint").slideToggle();
+});

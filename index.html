@@ -6,37 +6,38 @@
   <title>Simon</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/309c2a07fd.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <h1 id="level-title">Click here to Start</h1>
+  <h1 id="level-title" class="black-bg">Click here to Start</h1>
+  <div>
+    <i class="icon fa-solid fa-question fa-2x"></i>
+    <p class="hint">Remember the pattern.</p>
+  </div>
   <div class="container">
     <div lass="row">
 
-      <div type="button" id="green" class="btn green">
+      <div type="button" id="green" class="btn green"></div>
 
-      </div>
-
-      <div type="button" id="red" class="btn red">
-
-      </div>
+      <div type="button" id="red" class="btn red"></div>
     </div>
 
     <div class="row">
 
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
 
     </div>
 
   </div>
 
+  <h2 id="high-score" class="black-bg high-score-hidden">High Score:</h2>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="game.js"></script>
+
 </html>
